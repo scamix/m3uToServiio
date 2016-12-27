@@ -1,6 +1,5 @@
 import glob, os
 from urllib.parse import quote
-os.chdir(os.getcwd())
 
 for file in glob.glob("*.m3u"):
     nomefile = str(file).rsplit(".")[0]+".serviio"
