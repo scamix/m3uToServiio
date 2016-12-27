@@ -1,5 +1,5 @@
 import glob, os
-from urllib.parse import quote
+from urllib import quote
 
 for file in glob.glob("*.m3u"):
     nomefile = str(file).rsplit(".")[0]+".serviio"
@@ -7,9 +7,9 @@ for file in glob.glob("*.m3u"):
     text_file.write('<?xml version="1.0" encoding="UTF-8" ?>\n<onlineRepositoriesBackup>\n<items>\n')
     with open(file) as f:
         count=1
-        for linea in f:
-
-            #line = f.readline()
+        while True:
+            linea = f.readline()
+            if not linea: break
             if linea != "#EXTM3U\n":
                 text_file.write('<backupItem enabled="true" order="' +str(count)+'">\n')
                 text_file.write('<serviioLink>serviio://video:live?url=')
