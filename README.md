@@ -2,7 +2,7 @@ Simple script thant convert a m3u playlist to an importable file that you can us
 
 **Usage**:
 
->- git https://github.com/scamix/m3uToServiio.git
+>- git clone https://github.com/scamix/m3uToServiio.git
 >- mv my_m3u_file.m3u m3uToServiio
 >- cd m3uToServiio
 >- python m3uToServiio.py
